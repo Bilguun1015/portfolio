@@ -1,45 +1,21 @@
 import React from 'react';
-import Projects from './Projects.js'
-import { Sticky, Icon, Image, Menu, Segment, Sidebar, Header } from 'semantic-ui-react';
 
-import '../styling/containerStyling.scss'
+import { Container, Navbar, Nav } from 'react-bootstrap';
 
-const SideBar = props => {
-    
+import './sidebar.scss';
 
-    return (
-        <Sticky>
-        <Sidebar.Pushable >
-          <Sidebar
-            as={Menu}
-            animation='overlay'
-            icon='labeled'
-            inverted
-            onHide={() => props.setVisible(false)}
-            vertical
-            visible={props.visible}
-            width='thin'
-          >
-            <Menu.Item as='a'>
-              <Icon name='home' />
-              Home
-            </Menu.Item>
-            <Menu.Item as='a'>
-              <Icon name='gamepad' />
-              Games
-            </Menu.Item>
-            <Menu.Item as='a'>
-              <Icon name='camera' />
-              Channels
-            </Menu.Item>
-          </Sidebar>
+const Sidebar = () => {
 
-          <Sidebar.Pusher dimmed={props.visible}>
-              <Projects />
-          </Sidebar.Pusher>
-        </Sidebar.Pushable>
-        </Sticky>
-      )
+  return (
+    // <Container fluid style={{border: "1px solid black", paddingLeft:0, height}}>
+      <Navbar >
+        <Nav className="mr-auto">
+          <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="#features">Portfolio</Nav.Link>
+          <Nav.Link href="#pricing">Contact Me</Nav.Link>
+        </Nav>
+      </Navbar>
+  )
 }
 
-export default SideBar
+export default Sidebar

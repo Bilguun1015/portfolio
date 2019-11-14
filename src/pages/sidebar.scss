@@ -1,0 +1,23 @@
+
+
+.navbar{
+    width: 180px;
+    height: 160px;
+    top:100px;
+    padding:0;
+    background: black;
+    transform: translateX(-181px);
+    transition: transform .3s ease-out;
+}
+
+.nav-link{
+    color: white !important;
+}
+
+.mr-auto{
+    flex-direction: column !important;
+}
+
+.container-fluid{
+    padding-left: 0;
+}

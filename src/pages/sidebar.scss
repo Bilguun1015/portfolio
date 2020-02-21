@@ -1,6 +1,6 @@
 
-
 .navbar{
+    z-index: 10000;
     width: 180px;
     height: 160px;
     top:100px;
@@ -8,16 +8,34 @@
     background: black;
     transform: translateX(-181px);
     transition: transform .3s ease-out;
+    .nav-link{
+        color: white !important;
+    }
+    .active{
+        color: red !important;
+    }
 }
-
-.nav-link{
-    color: white !important;
-}
-
 .mr-auto{
     flex-direction: column !important;
 }
 
 .container-fluid{
     padding-left: 0;
+    border: 1px solid black;
+    // height: 100vh;
+    // background-color: skyblue;
+}
+.projects{
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100vh;
+    background-color: brown;
+}
+.about{
+    top: 0px;
+    background-color: skyblue;
+    height: 100vh;
+
 }

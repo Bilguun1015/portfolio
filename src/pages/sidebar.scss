@@ -1,13 +1,13 @@
 
 .navbar{
     z-index: 10000;
-    // width: 180px;
+    width: 180px;
     height: 160px;
     top:100px;
     padding:0;
     background: black;
-    // transform: translateX(-180px);
-    // transition: transform 1s ease-out;
+    transform: translateX(-180px);
+    transition: transform 500ms ease;
     position: fixed !important;
     .nav-link{
         color: white !important;
@@ -15,6 +15,10 @@
     .active{
         color: red !important;
     }
+}
+.visible{
+    transition: transform 1s ease-in-out;
+    transform: translate(0)
 }
 .navbar_icon{
     position: fixed;

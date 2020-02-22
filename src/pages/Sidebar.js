@@ -20,9 +20,9 @@ const Sidebar = () => {
     }
   }
 
-  const duration = 10000
+  const duration = 100000
   const sidebarStyle = {
-    transition: `width ${duration}ms`
+    transition: `width ${duration}ms ease-in-out`
   }
   const sidebarTransitionStyles = {
     entering: { width: 0 },
@@ -58,20 +58,13 @@ const Sidebar = () => {
   return (
     // <Container fluid style={{border: "1px solid black", paddingLeft:0, height}}>
     <>
-        <Transition in={sidebarVisible} timeout={duration}>
-          {state => (
-            <Navbar style={{
-              ...sidebarStyle,
-              ...sidebarTransitionStyles[state]
-            }}>
-            <Nav className="mr-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#features">Portfolio</Nav.Link>
-              <Nav.Link href="#pricing">Contact Me</Nav.Link>
-            </Nav>
-          </Navbar>
-          )}
-         </Transition> 
+     <Navbar className={sidebarVisible ? 'visible': null}>
+        <Nav className="mr-auto">
+          <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="#features">Portfolio</Nav.Link>
+          <Nav.Link href="#pricing">Contact Me</Nav.Link>
+        </Nav>
+      </Navbar> 
 
       <div className={sidebarVisible ? 'inverse_icon' : 'navbar_icon'} onClick={setVisible}>
         <Icon name='bars' size='big'/>

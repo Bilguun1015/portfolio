@@ -1,19 +1,31 @@
 
 .navbar{
     z-index: 10000;
-    width: 180px;
+    // width: 180px;
     height: 160px;
     top:100px;
     padding:0;
     background: black;
-    transform: translateX(-181px);
-    transition: transform .3s ease-out;
+    // transform: translateX(-180px);
+    // transition: transform 1s ease-out;
+    position: fixed !important;
     .nav-link{
         color: white !important;
     }
     .active{
         color: red !important;
     }
+}
+.navbar_icon{
+    position: fixed;
+    color: black;
+    top: 100px;
+}
+.inverse_icon{
+    position: fixed;
+    color: white;
+    top: 100px;
+    z-index: 10001;
 }
 .mr-auto{
     flex-direction: column !important;
@@ -37,5 +49,4 @@
     top: 0px;
     background-color: skyblue;
     height: 100vh;
-
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Sidebar from './Sidebar.js';
 import AboutMe from './AboutMe.js';
 import Projects from './Projects.js';
@@ -12,9 +12,9 @@ const MainContainer = () => {
 
     return (
         // <Container fluid={true}>
-        <>
-            <AboutMe />
+        <>  
             <Sidebar />
+            <AboutMe />
             <Projects />
         </>
         // </Container>

@@ -1,7 +1,9 @@
 $breakpoint-tablet: 768px;
 $breakpoint-phone: 480px;
+
+//navbar styling
 .navbar{
-    z-index: 10000;
+    z-index: 1000 !important;
     width: 180px;
     height: 160px;
     top:100px;
@@ -21,50 +23,34 @@ $breakpoint-phone: 480px;
     transition: transform 500ms ease-in-out;
     transform: translate(0)
 }
-.navbar_icon{
+.navbar_icon, .inverse_icon{
+    z-index: 1000 !important;
     position: fixed;
     color: white;
     top: 100px;
-}
-.inverse_icon{
-    position: fixed;
-    color: white;
-    top: 100px;
-    z-index: 10001;
 }
 .mr-auto{
     flex-direction: column !important;
 }
 
-.container-fluid{
-    padding-left: 0;
-    border: 1px solid black;
-    // height: 100vh;
-    // background-color: skyblue;
-}
-.projects{
-    border: 1px solid blue;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: 100vh;
-    background-color: brown;
-    .card{
-        height: fit-content;
-    }
-}
+// .container-fluid{
+//     padding-left: 0;
+//     border: 1px solid black;
+//     // height: 100vh;
+//     // background-color: skyblue;
+// }
+
+//about page styling
 .about{
-    top: 0px;
+    top: 0;
     .top{
         display: flex;
-        z-index: -1;
         height: 95vh;
         @media (max-width: $breakpoint-phone) {
             flex-direction: column;
         }
         .left{
             border: 1px solid black;
-            z-index: -1;
             background-color: black;
             height:100%;
             align-content: center;
@@ -88,9 +74,6 @@ $breakpoint-phone: 480px;
             height:100%;
             display:flex;
             flex-direction: column;
-            @media (max-width: $breakpoint-phone) {
-                z-index: -1;
-            }
             h1{
                 margin:auto;
                 margin-bottom: 0;
@@ -133,5 +116,37 @@ $breakpoint-phone: 480px;
         a{
             text-decoration: none;
         }
+    }
+}
+
+//projects styling
+.projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .up{
+        cursor: pointer;
+        height: 50vh;
+        border: 1px solid black;
+        background-color:none;
+        .col{
+            display: flex;
+            .inner{
+                margin:auto;
+                width:400px;
+                height: 90%;
+                border-radius: 40px;
+                box-shadow: 5px 5px 30px 7px;
+                transition: 0.4s;
+                background-color: chocolate;
+                &:hover {
+                    transform: scale(0.9, 0.9);
+                    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
+                }
+            }
+        }
+    }
+    .down{
+        height: 50vh;
     }
 }

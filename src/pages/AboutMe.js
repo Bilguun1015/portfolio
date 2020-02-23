@@ -23,14 +23,7 @@ const AboutMe = () => {
                     <h3>Full Stack Software Developer</h3>
                     <p> I am an energetic Full Stack Web Developer with experience in developing fully functional, responsive and interactive websites. 
                      I not only design and develop well-structured web applications, 
-                        I contribute to these projects by being a motivated team-player in a collaborative environment. My areas of expertise include (but are not limited to) 
-                        Front-End: React, JavaScript, HTML, CSS, SASS, LESS
-                        Back-End: NodeJS - Express, KNEX, JavaScript, Django, RESTful API
-                        Databases: Postgres, SQLITE3
-                        Version Control: Git
-                        Computer Science: Python – Algorithms, Data Structures, Computer Architecture
-                        Strong collaboraTve skills
-                        Excellent problem-solving skills
+                        I contribute to these projects by being a motivated team-player in a collaborative environment. 
                         Please feel free to take a look around and learn a little bit more about me.  </p>
                 </Col>
             </Row>

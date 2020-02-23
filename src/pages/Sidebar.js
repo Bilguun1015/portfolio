@@ -19,49 +19,15 @@ const Sidebar = () => {
       setSidebarVisible(true)
     }
   }
-
-  const duration = 100000
-  const sidebarStyle = {
-    transition: `width ${duration}ms ease-in-out`
-  }
-  const sidebarTransitionStyles = {
-    entering: { width: 0 },
-    entered: { width: '180px' },
-    exiting: { width: '180px' },
-    exited: { width: 0 }
-  }
-  // const linkStyle = {
-  //   transition: `opacity ${duration}ms`
-  // }
-  // const linkTransitionStyles = {
-  //   entering: { opacity: 0 },
-  //   entered: { opacity: 1 },
-  //   exiting: { opacity: 1 },
-  //   exited: { opacity: 0 }
-  // }
-
-  // const renderLinks = () => {
-  //   return <Transition in={sidebarVisible} timeout={duration}>
-  //     {(state) => (
-  //       <div style={{
-  //         ...linkStyle,
-  //         ...linkTransitionStyles[state]
-  //       }}>
-  //         <div className="sidebar-link">Home</div>
-  //         <div className="sidebar-link">About</div>
-  //         <div className="sidebar-link">Contact</div>
-  //       </div>
-  //     )}
-  //   </Transition>
-  // }
+  
   return (
     // <Container fluid style={{border: "1px solid black", paddingLeft:0, height}}>
     <>
      <Navbar className={sidebarVisible ? 'visible': null}>
         <Nav className="mr-auto">
           <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Portfolio</Nav.Link>
-          <Nav.Link href="#pricing">Contact Me</Nav.Link>
+          <Nav.Link href="#portfolio">Portfolio</Nav.Link>
+          <Nav.Link href="#contact">Contact Me</Nav.Link>
         </Nav>
       </Navbar> 
 

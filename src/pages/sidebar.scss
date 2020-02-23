@@ -1,4 +1,5 @@
-
+$breakpoint-tablet: 768px;
+$breakpoint-phone: 480px;
 .navbar{
     z-index: 10000;
     width: 180px;
@@ -17,7 +18,7 @@
     }
 }
 .visible{
-    transition: transform 1s ease-in-out;
+    transition: transform 500ms ease-in-out;
     transform: translate(0)
 }
 .navbar_icon{
@@ -58,6 +59,9 @@
         display: flex;
         z-index: -1;
         height: 95vh;
+        @media (max-width: $breakpoint-phone) {
+            flex-direction: column;
+        }
         .left{
             border: 1px solid black;
             z-index: -1;
@@ -65,10 +69,16 @@
             height:100%;
             align-content: center;
             bottom:0;
+            @media (max-width: $breakpoint-phone) {
+                text-align: center;
+            }
             img{
                 width:70%;
                 position: absolute;
                 bottom:10%;
+                @media (max-width: $breakpoint-phone) {
+                    position: relative;
+                }
             }
         }
         .right{
@@ -78,19 +88,37 @@
             height:100%;
             display:flex;
             flex-direction: column;
+            @media (max-width: $breakpoint-phone) {
+                z-index: -1;
+            }
             h1{
                 margin:auto;
                 margin-bottom: 0;
+                @media (max-width: $breakpoint-tablet) {
+                    font-size: 20px;
+                }
+                @media (max-width: $breakpoint-phone) {
+                    margin-top: 0;
+                }
             }
             h3{
                 margin:auto;
                 margin-top: 0;
                 margin-bottom: 0;
+                @media (max-width: $breakpoint-tablet) {
+                    font-size: 16px;
+                }
             }
             p{
                 margin: auto;
                 margin-top:20px;
                 font-size: 1.3rem;
+                @media (max-width: $breakpoint-tablet) {
+                    font-size: 12px;
+                }
+                @media (max-width: $breakpoint-phone) {
+                    width: 90%;
+                }
             }
         }
     }

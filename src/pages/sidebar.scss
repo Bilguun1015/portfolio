@@ -5,7 +5,7 @@
     height: 160px;
     top:100px;
     padding:0;
-    background: black;
+    background: none;
     transform: translateX(-180px);
     transition: transform 500ms ease;
     position: fixed !important;
@@ -22,7 +22,7 @@
 }
 .navbar_icon{
     position: fixed;
-    color: black;
+    color: white;
     top: 100px;
 }
 .inverse_icon{
@@ -48,19 +48,28 @@
     justify-content: space-evenly;
     height: 100vh;
     background-color: brown;
+    .card{
+        height: fit-content;
+    }
 }
 .about{
     top: 0px;
-    .row{
+    .top{
         display: flex;
         z-index: -1;
-        height: 100vh;
+        height: 95vh;
         .left{
             border: 1px solid black;
             z-index: -1;
-            background-color: yellow;
+            background-color: black;
             height:100%;
             align-content: center;
+            bottom:0;
+            img{
+                width:70%;
+                position: absolute;
+                bottom:10%;
+            }
         }
         .right{
             background-color: black;
@@ -68,9 +77,33 @@
             color: white;
             height:100%;
             display:flex;
+            flex-direction: column;
+            h1{
+                margin:auto;
+                margin-bottom: 0;
+            }
+            h3{
+                margin:auto;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
             p{
                 margin: auto;
+                margin-top:20px;
+                font-size: 1.3rem;
             }
+        }
+    }
+    .bottom{
+        height: 5vh;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        .icon{
+            color:white;
+        }
+        a{
+            text-decoration: none;
         }
     }
 }

@@ -54,7 +54,6 @@ const Sidebar = () => {
   //     )}
   //   </Transition>
   // }
-
   return (
     // <Container fluid style={{border: "1px solid black", paddingLeft:0, height}}>
     <>
@@ -67,7 +66,7 @@ const Sidebar = () => {
       </Navbar> 
 
       <div className={sidebarVisible ? 'inverse_icon' : 'navbar_icon'} onClick={setVisible}>
-        <Icon name='bars' size='big'/>
+        <Icon name={sidebarVisible ? 'cancel' : 'bars'} size='big'/>
       </div>
     </>
   )

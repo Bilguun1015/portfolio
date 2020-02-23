@@ -12,7 +12,12 @@ const AboutMe = () => {
     return (
         <div className='about'>
             <Row>
-                <Col>My name is Bilguun Nomch who is a Full Stack Web Developer.</Col>
+                <Col className='left'>
+                    <p></p>
+                </Col>
+                <Col className='right'>
+                    <p>My name is Bilguun Nomch who is a Full Stack Web Developer.</p>
+                </Col>
             </Row>
         </div>
     )

@@ -37,7 +37,7 @@ const Projects = props => {
                 </div>
             </Col>
         </Row>
-        <Row className='up'>
+        <Row className='down'>
             <Col>
                 <div className='inner'>
                     <img className='comingSoon' src='https://media.giphy.com/media/rgVLXMbhACKQ/giphy.gif' alt='Coming Soon'/>

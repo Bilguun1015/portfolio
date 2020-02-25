@@ -111,8 +111,14 @@ $host:'https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/';
             }
         }
         .horizontal_line{
-            width: 720px;
+            width: 600px;
             border-top: 1px solid white;
+            @media(max-width: $breakpoint-tablet){
+                width: 480px;
+            }
+            @media(max-width: $breakpoint-phone){
+                width: 420px;
+            }
         }
         .links{
             padding-top: 30px;
@@ -133,6 +139,20 @@ $host:'https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/';
             display: flex;
             justify-content: space-evenly;
             width: 40%;
+            div:first-of-type{
+                @media(max-width: $breakpoint-phone){
+                    border-bottom: none;
+                    border-bottom-right-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+            }
+            div:nth-of-type(2){
+                border-top-right-radius: 0;
+                border-top-left-radius: 0;
+            }
+            @media(max-width: $breakpoint-phone){
+                flex-direction: column;
+            }
             .navigation{
                 width: 100%;
                 padding: 10px;
@@ -140,6 +160,9 @@ $host:'https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/';
                 text-align: center;
                 color: #D3D3D3;
                 cursor:pointer;
+                @media(max-width: $breakpoint-phone){
+                    border-radius: 3px;
+                }
                 &:hover{
                     background-color: rgba(255, 255, 255, 0.2);
                 }

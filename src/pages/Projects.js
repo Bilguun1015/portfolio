@@ -22,25 +22,30 @@ const Projects = props => {
             <Col>
                 <div className='inner'>
                     <img src={speakoutproj} alt='Image of Speak Out Project'/>
+                    <h4>Database Migration Project</h4>
                     <p>hello</p>
+                    <p>some randome stuff I had to come up with to check if it works or i dont know if it will</p>
+                    <p>some randome stuff I had to come up with to check if it works or i dont know if it will</p>
                 </div>
             </Col>
             <Col>
                 <div className='inner'>
                     <img src={secretrecipeproj} alt='Image of Speak Out Project'/>
+                    <h4>Save Your Perfect Recipes</h4>
                     <p>hello</p>
+                    
                 </div>
             </Col>
         </Row>
         <Row className='up'>
             <Col>
                 <div className='inner'>
-                    <p>hello</p>
+                    <img className='comingSoon' src='https://media.giphy.com/media/rgVLXMbhACKQ/giphy.gif' alt='Coming Soon'/>
                 </div>
             </Col>
             <Col>
                 <div className='inner'>
-                    <p>hello</p>
+                    <img className='comingSoon' src='https://media.giphy.com/media/rgVLXMbhACKQ/giphy.gif' alt='Coming Soon'/>
                 </div>
             </Col>
         </Row>

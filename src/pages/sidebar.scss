@@ -63,10 +63,10 @@ $host:'https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/';
 //about page styling
 .about{
     #background{
-        min-height: 100%;
-        min-width: 1024px;
-        width: 100%;
-        height: auto;
+        // min-height: 100vh;
+        // min-width: 1024px;
+        width: 100vw;
+        height: 100vh;
         position: fixed;
         top:0;
         left:0;

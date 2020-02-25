@@ -77,15 +77,16 @@ $host:'https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/';
         display: none;
     }
     .middle{
-        height: 100vh;
+        // height: 100vh;
         margin:auto;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        margin-top: 80px;
         .my_pic{
             width: 200px;
-            @media(max-width: $breakpoint-phone){
+            @media(max-width: $breakpoint-tablet){
                 width: 150px;
             }
             img{
@@ -95,7 +96,7 @@ $host:'https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/';
                 width: 100%;
                 height: 200px;
                 transform: rotate(180deg);
-                @media(max-width: $breakpoint-phone){
+                @media(max-width: $breakpoint-tablet){
                     height: 150px;
                 }
             }

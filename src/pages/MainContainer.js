@@ -13,9 +13,8 @@ const MainContainer = () => {
     return (
         // <Container fluid={true}>
         <>  
-            <Sidebar />
+            {/* <Sidebar /> */}
             <AboutMe />
-            <Projects />
         </>
         // </Container>
     )

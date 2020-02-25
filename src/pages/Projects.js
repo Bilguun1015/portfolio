@@ -1,35 +1,46 @@
 import React from 'react';
 
 import { Card, ListGroup, ListGroupItem, Row, Col } from 'react-bootstrap';
+import { Icon } from 'semantic-ui-react';
+
+import speakoutproj from './pics/speakoutproj.png';
+import secretrecipeproj from './pics/secretrecipeproj.png';
 
 import './sidebar.scss';
 
-const Projects = () => {
+const Projects = props => {
 
   return (
+    
     // <Container fluid style={{border: "1px solid black", paddingLeft:0, height}}>
     <div className='projects'>
+        <div className='header'>
+            <h2>Projects</h2>
+            <Icon name='cancel' size='large' onClick={()=>{props.setShowProjects(false)}}/>
+        </div>
         <Row className='up'>
             <Col>
                 <div className='inner'>
-                    hello
+                    <img src={speakoutproj} alt='Image of Speak Out Project'/>
+                    <p>hello</p>
                 </div>
             </Col>
             <Col>
                 <div className='inner'>
-                    hello
+                    <img src={secretrecipeproj} alt='Image of Speak Out Project'/>
+                    <p>hello</p>
                 </div>
             </Col>
         </Row>
         <Row className='up'>
             <Col>
                 <div className='inner'>
-                    hello
+                    <p>hello</p>
                 </div>
             </Col>
             <Col>
                 <div className='inner'>
-                    hello
+                    <p>hello</p>
                 </div>
             </Col>
         </Row>

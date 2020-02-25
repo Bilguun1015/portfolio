@@ -23,7 +23,9 @@ const Projects = props => {
                 <div className='inner'>
                     <img src={speakoutproj} alt='Image of Speak Out Project'/>
                     <h4>Database Migration Project</h4>
-                    <p>hello</p>
+                    <p>Worked on a Web Based Database solution for English school in Bahrain with cross-functional team 
+                        for 8 weeks.
+                    </p>
                     <p>some randome stuff I had to come up with to check if it works or i dont know if it will</p>
                     <p>some randome stuff I had to come up with to check if it works or i dont know if it will</p>
                 </div>
@@ -32,7 +34,7 @@ const Projects = props => {
                 <div className='inner'>
                     <img src={secretrecipeproj} alt='Image of Speak Out Project'/>
                     <h4>Save Your Perfect Recipes</h4>
-                    <p>hello</p>
+                    <p></p>
                     
                 </div>
             </Col>

@@ -26,6 +26,7 @@ const AboutMe = () => {
                 <div className='my_pic'>
                     <img src={mypic} alt='A picture of me'/>
                 </div>
+                <div className='vertical_line'></div>
                 <div className='horizontal_line'></div>
                 <div className='intro'>
                     <h1>Bilguun T. Nomch </h1>
@@ -43,6 +44,7 @@ const AboutMe = () => {
                     <a href='mailto:bbg.1015@gmail.com'><Icon name='mail' size='big' target='_blank'/></a>
                 </div>
                 <div className='horizontal_line'></div>
+                <div className='vertical_line'></div>
                 <div className='bottom'>
                     <div className='navigation' onClick={setProjectVisible}>
                         <p>Projects</p>

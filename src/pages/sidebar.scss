@@ -94,9 +94,16 @@ $host:'https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/';
                 transform: rotate(180deg);
             }
         }
+        .vertical_line{
+            height:30px;
+            border:1px solid white;
+        }
         .intro{
             text-align: center;
             color: #D3D3D3;
+            h1{
+                padding-top: 10px;
+            }
             p{
                 width: 50%;
                 margin:auto;
@@ -104,8 +111,6 @@ $host:'https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/';
             }
         }
         .horizontal_line{
-            margin-top: 30px;
-            margin-bottom: 20px;
             width: 720px;
             border-top: 1px solid white;
         }
@@ -128,7 +133,6 @@ $host:'https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/';
             display: flex;
             justify-content: space-evenly;
             width: 40%;
-            margin-top:10px;
             .navigation{
                 width: 100%;
                 padding: 10px;

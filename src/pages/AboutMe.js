@@ -13,16 +13,22 @@ import './sidebar.scss';
 
 const AboutMe = () => {
     const [showProjects, setShowProjects] = useState(false)
+    const [showContact, setShowContact] = useState(false)
 
     const setProjectVisible = e => {
         e.preventDefault();
         setShowProjects(true)
     }
 
+    const setContactVisible = e => {
+        e.preventDefault();
+        setShowContact(true)
+    }
+
     return (
         <div className='about'>
             <img id='background' src={background} alt='A Guy Looking Up To The Sky.'/>
-            <Row className={showProjects ? 'none' : 'middle'} >
+            <Row className={showProjects || showContact ? 'none' : 'middle'} >
                 <div className='my_pic'>
                     <img src={mypic} alt='A picture of me'/>
                 </div>
@@ -49,12 +55,13 @@ const AboutMe = () => {
                     <div className='navigation' onClick={setProjectVisible}>
                         <p>Projects</p>
                     </div>
-                    <div className='navigation'>
+                    <div className='navigation' onClick={setContactVisible}>
                         <p>Contact Me</p>
                     </div>
                 </div>
             </Row>
             {showProjects ? <Projects setShowProjects = {setShowProjects}/> : null}
+            {showContact ? <ContactMe setShowContact = {setShowContact}/> : null}
         </div>
     )
 }

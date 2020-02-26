@@ -1,10 +1,7 @@
 $breakpoint-tablet: 768px;
 $breakpoint-phone: 480px;
-@import url('https://fonts.googleapis.com/css?family=Abel');
 
-html, body {
-  font-family: Abel, Arial, Verdana, sans-serif;
-}
+html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
 
 //navbar styling
 .navbar{
@@ -188,8 +185,6 @@ html, body {
     border: 1px solid white;
     width: 600px;
     height: 600px;
-    // margin-top: 50px;
-    // padding-bottom: 10px;
     .header{
         display: flex;
         width:78%;
@@ -198,6 +193,7 @@ html, body {
         align-items: baseline;
         flex-direction: column-reverse;
         height: 80px;
+        padding-bottom: 10px;
         .icon{
             color: #D3D3D3;
             cursor: pointer;
@@ -206,6 +202,10 @@ html, body {
         }
         h2{
             text-decoration: underline;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 100;
+            text-underline-position: under;
         }
     }
     .up{
@@ -234,10 +234,11 @@ html, body {
                 border-radius: 4px;
                 // box-shadow: 5px 5px 30px 7px;
                 transition: 0.4s;
-                background-color: white;
+                // background-color: white;
                 filter: grayscale(60%);
                 overflow: hidden;
                 // padding: 14px 24px;
+                transition: width 0.4s;
                 background: linear-gradient(#92bCa6, #A2CCB6);
                 &:hover {
                     filter: grayscale(0);
@@ -260,6 +261,119 @@ html, body {
                 }
                 .comingSoon{
                     padding-top: 80px;
+                }
+            }
+        }
+    }
+}
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    .header{
+        display: flex;
+        width:78%;
+        justify-content: space-between;
+        color:#D3D3D3;
+        align-items: baseline;
+        flex-direction: column-reverse;
+        height: 80px;
+        padding-bottom: 10px;
+        .icon{
+            color: #D3D3D3;
+            cursor: pointer;
+            width: 100%;
+            text-align: end;
+        }
+        h2{
+            text-decoration: underline;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 100;
+            text-underline-position: under;
+        }
+    }
+    .send_form{
+        position: absolute;
+        top: 80px;
+        width: 80%;
+        color: #D3D3D3;
+        .labels{
+            width:100%;
+            // border: 1px solid red;
+            display: flex;
+            & > * {
+                width:100%;
+                padding: 10px;
+                font-size: 16px;
+            }
+        }
+        .big>textarea{
+            height:150px;
+            &:focus{
+                background-color: rgba(255, 255, 255, 0.2);
+                outline: none;
+                border: 2px solid white;
+            }
+        }
+        .inputs{
+            width:100%;
+            display: flex;
+            & > * {
+                border:1px solid white;
+                border-radius: 3px;
+                width:100%;
+                margin-left:10px;
+                background-color: rgba(0, 0, 0, 0.5);
+                color:white;
+                height: 40px;
+            }
+            input:focus{
+                background-color: rgba(255, 255, 255, 0.2);
+                outline: none;
+                border: 2px solid white;
+            }
+        }
+        .buttons{
+            display:flex;
+            // border:1px solid red;
+            justify-content: flex-start;
+            width: 80%;
+            button{
+                width:100%;
+                border-radius: 3px;
+                padding: 8px;
+                margin: 10px 10px;
+            }
+            :nth-child(2){
+                color: #D3D3D3;
+                background-color: rgba(0, 0, 0, 0.5);
+                cursor: pointer;
+                &:hover{
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+            }
+        }
+        .links{
+            padding: 20px 10px;
+            a{
+                text-decoration: none;
+                color: #D3D3D3;
+                cursor: pointer;
+                .icon{
+                    transition: transform 0.4s;
+                    &:hover{
+                        transform: scale(1.3);
+                    }
                 }
             }
         }

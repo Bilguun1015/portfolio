@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { withFormik, Form, Field } from 'formik';
 
 import { Icon } from 'semantic-ui-react';
@@ -6,7 +6,34 @@ import './sidebar.scss'
 
 const ContactMe = props => {
 
+    const [message, setMessage] = useState({
+        sender: '',
+        email: '',
+        text: ''
+    });
+
+    const handleChange = e => {
+        setMessage({...message, 
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        console.log(message)
+    }
+
+    const handleReset = e => {
+        e.preventDefault();
+        setMessage({
+            sender:'',
+            email:'',
+            text:''
+        })
+    }
+
     return (
+        // <Form>
         <div className='contact'>
             <div className='header'>
                 <h2>Contact</h2>
@@ -18,19 +45,19 @@ const ContactMe = props => {
                     <label>Email</label>
                 </div>
                 <div className='inputs'>
-                    <input type='text'/>
-                    <input type='text'/>
+                    <input type='text' name='sender' value={message.sender} onChange={handleChange}/>
+                    <input type='email' name='email' value={message.email} onChange={handleChange}/>
                 </div>
                 <div className='labels'>
                 <label>Message</label>
                 </div>
                 <div className='inputs big'> 
-                    <textarea type='text'>
+                    <textarea name='text' value={message.text} onChange={handleChange}>
                     </textarea>
                 </div>
                 <div className='buttons'>
-                    <button>SEND MESSAGE</button>
-                    <button>RESET</button>
+                    <button type='submit' onClick={handleSubmit}>SEND MESSAGE</button>
+                    <button type='reset' onClick={handleReset}>RESET</button>
                 </div>
                 <div className='links'>
                     <a href='https://github.com/Bilguun1015' target='_blank'><Icon name='github' size='big' /></a>
@@ -39,6 +66,7 @@ const ContactMe = props => {
                 </div>
             </div>
         </div>
+        // </Form>
     )
 }
 

@@ -55,6 +55,17 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
         z-index: -50;
         filter:brightness(50%);
     }
+    #footer{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        color: darkgrey;
+        font-size: 10px;
+        a{
+            color: darkgrey;
+            text-decoration: none;
+        }
+    }
     .none{
         display: none;
     }
@@ -168,21 +179,16 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
 
 //projects styling
 .projects{
-    // max-width: 1024px;
-    // height:100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    // width: auto;
     background-color: rgba(0, 0, 0, 0.5);
-    // align-items: center;
-    // margin:auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     position: fixed;
-    border: 1px solid white;
+    // border: 1px solid white;
     width: 600px;
     height: 600px;
     .header{
@@ -232,12 +238,9 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
                 width:200px;
                 height: 200px;
                 border-radius: 4px;
-                // box-shadow: 5px 5px 30px 7px;
                 transition: 0.4s;
-                // background-color: white;
                 filter: grayscale(60%);
                 overflow: hidden;
-                // padding: 14px 24px;
                 transition: width 0.4s;
                 background: linear-gradient(#92bCa6, #A2CCB6);
                 &:hover {
@@ -349,6 +352,7 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
             justify-content: flex-start;
             width: 80%;
             button{
+                outline:none;
                 width:100%;
                 border-radius: 3px;
                 padding: 8px;

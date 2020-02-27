@@ -62,6 +62,7 @@ const AboutMe = () => {
             </Row>
             {showProjects ? <Projects setShowProjects = {setShowProjects}/> : null}
             {showContact ? <ContactMe setShowContact = {setShowContact}/> : null}
+            <p id='footer'>Built By Bilguun Nomch Inspired By <a href='https://html5up.net/'>HTML5 UP</a></p>
         </div>
     )
 }

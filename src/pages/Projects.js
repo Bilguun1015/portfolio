@@ -22,32 +22,43 @@ const Projects = props => {
             <Col>
                 <div className='inner'>
                     <img src={speakoutproj} alt='Image of Speak Out Project'/>
-                    <h4>Database Migration Project</h4>
-                    <p>Worked on a Web Based Database solution for English school in Bahrain with cross-functional team 
-                        for 8 weeks.
-                    </p>
-                    <p>some randome stuff I had to come up with to check if it works or i dont know if it will</p>
-                    <p>some randome stuff I had to come up with to check if it works or i dont know if it will</p>
+                    <div className='info'>
+                        <h4>Speak Out</h4>
+                        <p className='date'>2019 Nov - 2019 Dec</p>
+                        <p>Worked on a solution for English School microsoft database migration to a web based database</p>
+                        <div className='links'>
+                            <a href='https://github.com/Lambda-School-Labs/speak-out-fe' target='_blank'><Icon name='github' size='large' /></a>
+                            <a href='https://speakout-now.com/' target='_blank'><Icon name='linkify' size='large' /></a>
+                            {/* <a href='mailto:bbg.1015@gmail.com'><Icon name='mail' size='large' target='_blank'/></a> */}
+                        </div>
+                    </div>
                 </div>
             </Col>
             <Col>
                 <div className='inner'>
                     <img src={secretrecipeproj} alt='Image of Speak Out Project'/>
-                    <h4>Save Your Perfect Recipes</h4>
-                    <p></p>
-                    
+                    <div className='info'>
+                        <h4>Secret Recipes</h4>
+                        <p className='date'>4 Day School Project</p>
+                        <p>As a cross-functional team member worked on thise application to practice React framework.</p>
+                        <div className='links'>
+                            <a href='https://github.com/orgs/secret-family-recipe-s-cookbook/dashboard' target='_blank'><Icon name='github' size='large' /></a>
+                            <a href='https://secret-recipes-marketpage.netlify.com/' target='_blank'><Icon name='linkify' size='large' /></a>
+                            {/* <a href='mailto:bbg.1015@gmail.com'><Icon name='mail' size='large' target='_blank'/></a> */}
+                        </div>
+                    </div>
                 </div>
             </Col>
         </Row>
         <Row className='down'>
             <Col>
                 <div className='inner'>
-                    <img className='comingSoon' src='https://media.giphy.com/media/rgVLXMbhACKQ/giphy.gif' alt='Coming Soon'/>
+                    {/* <img className='comingSoon' src='https://media.giphy.com/media/rgVLXMbhACKQ/giphy.gif' alt='Coming Soon'/> */}
                 </div>
             </Col>
             <Col>
                 <div className='inner'>
-                    <img className='comingSoon' src='https://media.giphy.com/media/rgVLXMbhACKQ/giphy.gif' alt='Coming Soon'/>
+                    {/* <img className='comingSoon' src='https://media.giphy.com/media/rgVLXMbhACKQ/giphy.gif' alt='Coming Soon'/> */}
                 </div>
             </Col>
         </Row>

@@ -3,8 +3,8 @@ import React from 'react';
 import { Card, ListGroup, ListGroupItem, Row, Col } from 'react-bootstrap';
 import { Icon } from 'semantic-ui-react';
 
-import speakoutproj from './pics/speakoutproj.png';
-import secretrecipeproj from './pics/secretrecipeproj.png';
+import speakoutproj from './pics/speakoutproj.jpg';
+import secretrecipeproj from './pics/secretrecipeproj.jpg';
 
 import './sidebar.scss';
 

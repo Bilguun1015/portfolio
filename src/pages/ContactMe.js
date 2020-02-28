@@ -81,8 +81,8 @@ const ContactMe = props => {
                 </textarea>
             </div>
             <div className='buttons'>
-                <button type='submit' onClick={handleSubmit}>SEND MESSAGE</button>
-                <button type='reset' onClick={handleReset}>RESET</button>
+                <button id='submit' type='submit' onClick={handleSubmit}>SEND MESSAGE</button>
+                <button id='reset' type='reset' onClick={handleReset}>RESET</button>
             </div>
             <div className='links'>
                 <a href='https://github.com/Bilguun1015' target='_blank'><Icon name='github' size='big' /></a>

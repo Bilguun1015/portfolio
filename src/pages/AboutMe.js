@@ -6,7 +6,7 @@ import ContactMe from './ContactMe';
 import { Container, Col, Row } from 'react-bootstrap';
 import { Icon } from 'semantic-ui-react';
 
-import mypic from './pics/IMG_6836.JPG';
+import mypic from './pics/mypic.jpg';
 import background from './pics/background.jpg'
 import 'semantic-ui-css/semantic.min.css';
 import './sidebar.scss';

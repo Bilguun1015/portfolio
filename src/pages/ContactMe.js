@@ -13,7 +13,11 @@ const ContactMe = props => {
         text: ''
     });
 
-    const [error, setError] = useState(false)
+    const [error, setError] = useState({
+        sender: false,
+        email: false,
+        text: false
+    })
     const [success, setSuccess] = useState(false)
 
     const handleChange = e => {
@@ -24,7 +28,32 @@ const ContactMe = props => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        if (message.sender && message.sender && message.text) {
+        if(message.sender.length < 1 || !message.sender){
+            setError({
+                ...error,
+                sender: true
+            })
+        }
+        if(message.email.length < 1 || !message.email){
+            setError({
+                ...error,
+                email: true
+            })
+        }
+        if(message.text.length < 10 || !message.text){
+            setError({
+                ...error,
+                text: true
+            })
+        }
+        if(!message.email && !message.sender && !message.text){
+            setError({
+                sender: true,
+                email:true,
+                text:true
+            })
+        }
+        if (message.email && message.sender && message.text) {
             let templateParams = {
                 from_name: message.sender,
                 from_email: message.email,
@@ -38,6 +67,7 @@ const ContactMe = props => {
                 process.env.REACT_APP_EMAILJS_USER_ID
             ).then(res => {
                 if(res.status === 200){
+                    console.log(res)
                     setSuccess(true)
                 }
             }, err => {
@@ -70,14 +100,14 @@ const ContactMe = props => {
                 <label>Email</label>
             </div>
             <div className='inputs'>
-                <input type='text' name='sender' value={message.sender} onChange={handleChange}/>
-                <input type='email' name='email' value={message.email} onChange={handleChange}/>
+                <input type='text' name='sender' placeholder = {error.sender ? 'Name is required': null} value={message.sender} onChange={handleChange}/>
+                <input type='email' name='email' placeholder = {error.email ? 'Email is required': null} value={message.email} onChange={handleChange} required/>
             </div>
             <div className='labels'>
             <label>Message</label>
             </div>
             <div className='inputs big'> 
-                <textarea name='text' value={message.text} onChange={handleChange}>
+                <textarea name='text' placeholder = {error.text ? 'Message is required': null} value={message.text} onChange={handleChange}>
                 </textarea>
             </div>
             <div className='buttons'>

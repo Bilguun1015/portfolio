@@ -1,5 +1,5 @@
 $breakpoint-tablet: 768px;
-$breakpoint-phone: 480px;
+$breakpoint-phone: 500px;
 
 html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
 
@@ -56,7 +56,7 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
         filter:brightness(50%);
     }
     #footer{
-        position: absolute;
+        position: fixed;
         bottom: 0;
         right: 10px;
         color: darkgrey;
@@ -188,9 +188,11 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
     left: 50%;
     transform: translate(-50%, -50%);
     position: fixed;
-    // border: 1px solid white;
     width: 600px;
     height: 600px;
+    @media (max-width: $breakpoint-phone){
+        width: 400px;
+    }
     .header{
         display: flex;
         width:78%;
@@ -200,6 +202,7 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
         flex-direction: column-reverse;
         height: 80px;
         padding-bottom: 10px;
+        
         .icon{
             padding-top: 10px;
             color: #D3D3D3;
@@ -213,6 +216,9 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
             text-transform: uppercase;
             font-weight: 100;
             text-underline-position: under;
+            @media (max-width: $breakpoint-phone){
+                font-size: 16px;
+            }
         }
     }
     .up{
@@ -230,12 +236,17 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
         cursor: pointer;
         background-color:none;
         width: 80%;
+        @media (max-width: $breakpoint-phone){
+            flex-direction: column;
+            height: 80%;
+        }
         .col{
             padding:0;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            
             .inner{
                 width:200px;
                 height: 200px;
@@ -303,6 +314,9 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
     position: fixed;
     width: 600px;
     height: 600px;
+    @media (max-width: $breakpoint-phone){
+        width: 400px;
+    }
     .header{
         display: flex;
         width:78%;
@@ -325,6 +339,9 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
             text-transform: uppercase;
             font-weight: 100;
             text-underline-position: under;
+            @media (max-width: $breakpoint-phone){
+                font-size: 16px;
+            }
         }
     }
     #message{
@@ -376,12 +393,18 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
             // border:1px solid red;
             justify-content: flex-start;
             width: 80%;
+            @media (max-width: $breakpoint-phone){
+                width: 90%;
+            }
             button{
                 outline:none;
                 width:100%;
                 border-radius: 3px;
                 padding: 8px;
                 margin: 10px 10px;
+                @media (max-width: $breakpoint-phone){
+                    padding: 0;
+                }
             }
             :nth-child(2){
                 color: #D3D3D3;

@@ -45,8 +45,8 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
 //about page styling
 .about{
     #background{
-        // min-height: 100vh;
-        // min-width: 1024px;
+        min-height: 100vh;
+        min-width: 1024px;
         width: 100vw;
         height: 100vh;
         position: fixed;
@@ -90,6 +90,7 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
                 transform: rotate(180deg);
                 @media(max-width: $breakpoint-tablet){
                     height: 150px;
+                    transform: rotate(180deg);
                 }
             }
         }

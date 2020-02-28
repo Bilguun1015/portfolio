@@ -59,11 +59,12 @@ const AboutMe = () => {
                         <p>Contact Me</p>
                     </div>
                 </div>
-                <p id='footer'>Built By Bilguun Nomch Inspired By <a href='https://html5up.net/'>HTML5 UP</a></p>
             </Row>
             {showProjects ? <Projects setShowProjects = {setShowProjects}/> : null}
             {showContact ? <ContactMe setShowContact = {setShowContact}/> : null}
-            
+            <div id='footer'>
+                <p>Built By Bilguun Nomch Inspired By <a href='https://html5up.net/'>HTML5 UP</a></p>
+            </div>
         </div>
     )
 }

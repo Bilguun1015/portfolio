@@ -1,9 +1,9 @@
 import React,{ useState } from 'react';
-import Sidebar from './Sidebar.js';
 import Projects from './Projects';
+import Skills from './Skills';
 import ContactMe from './ContactMe';
 
-import { Container, Col, Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import { Icon } from 'semantic-ui-react';
 
 import mypic from './pics/mypic.jpg';
@@ -14,26 +14,27 @@ import './sidebar.scss';
 const AboutMe = () => {
     const [showProjects, setShowProjects] = useState(false)
     const [showContact, setShowContact] = useState(false)
+    const [showSkills, setShowSkills] = useState(false)
 
     const setProjectVisible = e => {
         e.preventDefault();
-        setShowProjects(true)
+        setShowProjects(true);
     }
 
     const setContactVisible = e => {
         e.preventDefault();
-        setShowContact(true)
+        setShowContact(true);
     }
 
     const setSkillsVisible = e =>{
         e.preventDefault();
-
+        setShowSkills(true);
     }
 
     return (
         <div className='about'>
             <img id='background' src={background} alt='A Guy Looking Up To The Sky.'/>
-            <Row className={showProjects || showContact ? 'none' : 'middle'} >
+            <Row className={showProjects || showContact || showSkills ? 'none' : 'middle'} >
                 <div className='my_pic'>
                     <img src={mypic} alt='A picture of me'/>
                 </div>
@@ -69,6 +70,7 @@ const AboutMe = () => {
                 </div>
             </Row>
             {showProjects ? <Projects setShowProjects = {setShowProjects}/> : null}
+            {showSkills ? <Skills setShowSkills = {setShowSkills}/> : null}
             {showContact ? <ContactMe setShowContact = {setShowContact}/> : null}
             <div id='footer'>
                 <p>Built By Bilguun Nomch Inspired By <a href='https://html5up.net/'>HTML5 UP</a></p>

@@ -300,6 +300,47 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
     }
 }
 
+.skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    .header{
+        display: flex;
+        width:78%;
+        justify-content: space-between;
+        color:#D3D3D3;
+        align-items: baseline;
+        flex-direction: column-reverse;
+        height: 80px;
+        padding-bottom: 10px;
+        .icon{
+            padding-top: 10px;
+            color: #D3D3D3;
+            cursor: pointer;
+            width: 100%;
+            text-align: end;
+        }
+        h2{
+            text-decoration: underline;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 100;
+            text-underline-position: under;
+            @media (max-width: $breakpoint-phone){
+                font-size: 16px;
+            }
+        }
+    }
+}
+
 .contact{
     display: flex;
     flex-direction: row;

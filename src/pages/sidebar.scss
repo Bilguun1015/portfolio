@@ -133,19 +133,27 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
             display: flex;
             justify-content: space-evenly;
             width: 40%;
-            div:first-of-type{
+            @media(max-width: 900px){
+                width: 45%;
+            }
+            @media(max-width: 700px){
+                width: 50%;
+            }
+            @media(max-width: 570px){
+                width: 60%;
+            }
+            .one, .two{
                 @media(max-width: $breakpoint-phone){
-                    border-bottom: none;
-                    border-bottom-right-radius: 0;
-                    border-bottom-left-radius: 0;
+                    border-bottom: none !important;
                 }
             }
-            div:nth-of-type(2){
+            .three{
                 border-top-right-radius: 0;
                 border-top-left-radius: 0;
             }
             @media(max-width: $breakpoint-phone){
                 flex-direction: column;
+                width: 40%;
             }
             .navigation{
                 width: 100%;
@@ -154,8 +162,10 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
                 text-align: center;
                 color: #D3D3D3;
                 cursor:pointer;
-                @media(max-width: $breakpoint-phone){
+                .three{
+                    @media(max-width: $breakpoint-phone){
                     border-radius: 3px;
+                    }
                 }
                 &:hover{
                     background-color: rgba(255, 255, 255, 0.2);

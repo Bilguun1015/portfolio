@@ -25,6 +25,11 @@ const AboutMe = () => {
         setShowContact(true)
     }
 
+    const setSkillsVisible = e =>{
+        e.preventDefault();
+
+    }
+
     return (
         <div className='about'>
             <img id='background' src={background} alt='A Guy Looking Up To The Sky.'/>
@@ -52,10 +57,13 @@ const AboutMe = () => {
                 <div className='horizontal_line'></div>
                 <div className='vertical_line'></div>
                 <div className='bottom'>
-                    <div className='navigation' onClick={setProjectVisible}>
+                    <div className='one navigation' onClick={setProjectVisible}>
                         <p>Projects</p>
                     </div>
-                    <div className='navigation' onClick={setContactVisible}>
+                    <div className='two navigation' onClick={setSkillsVisible}>
+                        <p>Skills</p>
+                    </div>
+                    <div className='three navigation' onClick={setContactVisible}>
                         <p>Contact Me</p>
                     </div>
                 </div>

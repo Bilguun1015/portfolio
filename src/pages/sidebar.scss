@@ -312,6 +312,12 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
     position: fixed;
     width: 600px;
     height: 600px;
+    @media (max-width: 650px){
+        width: 500px;
+    }
+    @media (max-width: $breakpoint-phone) {
+        width: 400px;
+    }
     .header{
         display: flex;
         width:78%;
@@ -336,6 +342,45 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
             text-underline-position: under;
             @media (max-width: $breakpoint-phone){
                 font-size: 16px;
+            }
+        }
+    }
+    .skill_icons{
+        position: absolute;
+        top: 100px;
+        width: 80%;
+        color: #D3D3D3;
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid rgba(0, 0, 0, 0);
+        height: 70%;
+        justify-content: space-between;
+        @media (max-width: 650px){
+            width: 90%;
+            justify-content: space-evenly;
+        }
+        @media (max-width: $breakpoint-phone){
+            width: 80%;
+            height: 60%;
+            justify-content: space-between;
+        }
+        .each_icon{
+            border: 1px solid white;
+            width: 120px;
+            height: 120px;
+            text-align: center;
+            padding-top: 30px;
+            border-radius: 50%;
+            @media (max-width: $breakpoint-phone) {
+                border: none;
+                border-radius: 0;
+                font-size: 10px;
+                width: 80px;
+                height: 80px;
+                padding-top: 0;
+                h4{
+                    font-size: 16px;
+                }
             }
         }
     }

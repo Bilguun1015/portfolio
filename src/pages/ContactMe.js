@@ -6,10 +6,8 @@ import './sidebar.scss'
 
 const ContactMe = props => {
 
-    const template_id = process.env.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-    const user_id = process.env.env.REACT_APP_EMAILJS_USER_ID;
-    console.log(template_id)
-    console.log(user_id)
+    const template_id = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const user_id = process.env.REACT_APP_EMAILJS_USER_ID;
 
     const [message, setMessage] = useState({
         sender: '',
@@ -67,9 +65,9 @@ const ContactMe = props => {
             }
             emailjs.send(
                 'gmail',
-                template_id,
+                "template_hwkwMtju",
                 templateParams,
-                user_id
+                "user_RtbbRJHpns8ZShVVhyfI8"
             ).then(res => {
                 if (res.status === 200) {
                     console.log(res)

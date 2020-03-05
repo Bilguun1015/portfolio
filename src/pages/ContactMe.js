@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import * as emailjs from 'emailjs-com';
 // import { withFormik, Form, Field } from 'formik';
-
 import { Icon } from 'semantic-ui-react';
 import './sidebar.scss'
 
 const ContactMe = props => {
+
+    const template_id = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const user_id = process.env.REACT_APP_EMAILJS_USER_ID;
+    console.log(template_id)
+    console.log(user_id)
 
     const [message, setMessage] = useState({
         sender: '',
@@ -63,9 +67,9 @@ const ContactMe = props => {
             }
             emailjs.send(
                 'gmail',
-                process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+                template_id,
                 templateParams,
-                process.env.REACT_APP_EMAILJS_USER_ID
+                user_id
             ).then(res => {
                 if (res.status === 200) {
                     console.log(res)

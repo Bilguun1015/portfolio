@@ -1,6 +1,8 @@
 {
-    "env": {
-      "REACT_APP_EMAILJS_TEMPLATE_ID": "@email_temp_id",
-      "REACT_APP_EMAILJS_USER_ID": "@email_user_id"
+    "build":{
+        "env": {
+            "REACT_APP_EMAILJS_TEMPLATE_ID": "email_temp_id",
+            "REACT_APP_EMAILJS_USER_ID": "email_user_id"
+        }
     }
-  }
+}

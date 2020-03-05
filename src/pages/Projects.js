@@ -16,11 +16,21 @@ const Projects = props => {
         recipes: false
     })
 
-    const handleExpand = e => {
+    const handleExpandSpeakOut = e => {
         e.preventDefault();
         setExpand({
             ...expand,
-            speakOut: !expand.speakOut
+            speakOut: !expand.speakOut,
+            recipes: false
+        })
+    }
+
+    const handleExpandRecipes = e => {
+        e.preventDefault();
+        setExpand({
+            ...expand,
+            recipes: !expand.recipes,
+            speakOut: false
         })
     }
 
@@ -34,11 +44,11 @@ const Projects = props => {
         </div>
         <Row className='up'>
             <Col>
-                <div className='inner' id={expand.speakOut ? 'bigger_view': null}>
+                <div className='inner' id={expand.speakOut ? 'bigger_view': null} style={expand.recipes && !expand.speakOut ? {'display':'none'} : null}>
                     <img src={speakoutproj} alt='Image of Speak Out Project'/>
                     <div className='info'>
                         <h4>Speak Out</h4>
-                        {expand.speakOut ? <Icon name='minus' size='large' onClick={handleExpand}/> : <Icon name='plus' size='large' onClick={handleExpand}/>}
+                        {expand.speakOut ? <Icon name='minus' size='large' onClick={handleExpandSpeakOut}/> : <Icon name='plus' size='large' onClick={handleExpandSpeakOut}/>}
                         <p>Worked on a solution for English School microsoft database migration to a web based database</p>
                         <ul>
                             <li>Did user research and competitive research during the planning phase</li>
@@ -56,12 +66,18 @@ const Projects = props => {
                 </div>
             </Col>
             <Col>
-                <div className='inner' style={expand.speakOut && !expand.recipes ? {'display':'none'} : null}>
+                <div className='inner' id={expand.recipes ? 'bigger_view': null} style={expand.speakOut && !expand.recipes ? {'display':'none'} : null}>
                     <img src={secretrecipeproj} alt='Image of Speak Out Project'/>
                     <div className='info'>
                         <h4>Secret Recipes</h4>
-                        <p className='date'>4 Day School Project</p>
+                        {expand.recipes ? <Icon name='minus' size='large' onClick={handleExpandRecipes}/> : <Icon name='plus' size='large' onClick={handleExpandRecipes}/>}
                         <p>As a cross-functional team member worked on thise application to practice React framework.</p>
+                        <ul>
+                            <li>Built out the Login Modal using React-Semantic-UI library and React hook</li>
+                            <li>Displayed different recipes on the landing page by making Axios API call</li>
+                            <li>Built out the recipe card component using React framework</li>
+                            <li>Styled the re-usable components using CSS</li>
+                        </ul>
                         <div className='links'>
                             <a href='https://github.com/orgs/secret-family-recipe-s-cookbook/dashboard' target='_blank'><Icon name='github' size='large' /></a>
                             <a href='https://secret-recipes-marketpage.netlify.com/' target='_blank'><Icon name='linkify' size='large' /></a>

@@ -245,36 +245,68 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
             align-items: center;
             flex-wrap: wrap;
             
+            #bigger_view{
+                margin-left: 40px;
+                height: 480px;
+                width: 400px;
+                border: 1px solid red;
+                // img{
+                //     height: 150px;
+                //     width: 400px
+                // }
+                .minus{
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+
+                }
+            }
             .inner{
                 width:200px;
-                height: 200px;
+                height: 170px;
                 border-radius: 4px;
-                // transition: 0.4s;
+                // color: #D3D3D3;
                 // filter: grayscale(60%);
                 overflow: hidden;
-                // transition: 2s;
+                // transition: width 0.5s ease;
                 background: linear-gradient(#92bCa6, #A2CCB6);
+                // background-color: black;
                 .info{
+                    .plus{
+                        width: 100%;
+                        // color: white;
+                        text-align: right;
+                        margin-bottom: 10px;
+                        margin-left: -5px;
+                    }
                     .links{
                         a{
                             color:black;
                             text-decoration: none;
+                            .icon{
+                                // color: white;
+                                &:hover{
+                                    transform: scale(1.1);
+                                }
+                            }
                         }
                     }
                 }
-                &:hover{
-                    // filter:grayscale(0);
-                    .info{
-                        transition: 1s ease;
-                        height: 200px;
-                        background: linear-gradient(#92bCa6, #A2CCB6);
-                        transform: translate(0,-124px);
-                        .date{
-                            width: 80%;
-                            border-bottom: 1px solid white;
-                        }
-                    }
-                }
+                // &:hover{
+                //     // filter:grayscale(0);
+                //     .info{
+                //         // border: 1px solid white;
+                //         transition: 1s ease;
+                //         height: 200px;
+                //         background: linear-gradient(#92bCa6, #A2CCB6);
+                //         // background-color: black;
+                //         transform: translate(0,-124px);
+                //         .date{
+                //             width: 80%;
+                //             border-bottom: 1px solid white;
+                //         }
+                //     }
+                // }
                 
                 h4{
                     padding: 10px 5px;

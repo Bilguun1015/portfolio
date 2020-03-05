@@ -1,14 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import { Card, ListGroup, ListGroupItem, Row, Col } from 'react-bootstrap';
-import { Icon } from 'semantic-ui-react';
+import { Icon, Popup } from 'semantic-ui-react';
 
 import speakoutproj from './pics/speakoutproj.jpg';
 import secretrecipeproj from './pics/secretrecipeproj.jpg';
 
+import 'semantic-ui-css/semantic.min.css';
 import './sidebar.scss';
 
 const Projects = props => {
+
+    const [expand, setExpand] = useState({
+        speakOut : false,
+        recipes: false
+    })
+
+    const handleExpand = e => {
+        e.preventDefault();
+        setExpand({
+            ...expand,
+            speakOut: !expand.speakOut
+        })
+    }
 
   return (
     
@@ -20,22 +34,29 @@ const Projects = props => {
         </div>
         <Row className='up'>
             <Col>
-                <div className='inner'>
+                <div className='inner' id={expand.speakOut ? 'bigger_view': null}>
                     <img src={speakoutproj} alt='Image of Speak Out Project'/>
                     <div className='info'>
                         <h4>Speak Out</h4>
-                        <p className='date'>2019 Nov - 2019 Dec</p>
+                        {expand.speakOut ? <Icon name='minus' size='large' onClick={handleExpand}/> : <Icon name='plus' size='large' onClick={handleExpand}/>}
                         <p>Worked on a solution for English School microsoft database migration to a web based database</p>
+                        <ul>
+                            <li>Did user research and competitive research during the planning phase</li>
+                            <li>Built out the front end view for students’ information using React framework</li>
+                            <li>Implemented attendance taking functionality and CRUD methods</li>
+                            <li>For state management, implemented Redux store</li>
+                        </ul>
                         <div className='links'>
+                            {/* <Popup content='Check out the code on Github' trigger = {<a href='https://github.com/Lambda-School-Labs/speak-out-fe' target='_blank'><Icon name='github' size='large' /></a>} position='top left' inverted/> */}
                             <a href='https://github.com/Lambda-School-Labs/speak-out-fe' target='_blank'><Icon name='github' size='large' /></a>
+                            {/* <Popup content='Check out the actual website' trigger = {<a href='https://speakout-now.com/' target='_blank'><Icon name='linkify' size='large' /></a>} position='top left' inverted/> */}
                             <a href='https://speakout-now.com/' target='_blank'><Icon name='linkify' size='large' /></a>
-                            {/* <a href='mailto:bbg.1015@gmail.com'><Icon name='mail' size='large' target='_blank'/></a> */}
                         </div>
                     </div>
                 </div>
             </Col>
             <Col>
-                <div className='inner'>
+                <div className='inner' style={expand.speakOut && !expand.recipes ? {'display':'none'} : null}>
                     <img src={secretrecipeproj} alt='Image of Speak Out Project'/>
                     <div className='info'>
                         <h4>Secret Recipes</h4>
@@ -67,43 +88,3 @@ const Projects = props => {
 }
 
 export default Projects
-
-
-{/* <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
-            <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
-                </Card.Text>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-                <ListGroupItem>Cras justo odio</ListGroupItem>
-                <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                <ListGroupItem>Vestibulum at eros</ListGroupItem>
-            </ListGroup>
-            <Card.Body>
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
-            </Card.Body>
-        </Card>
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
-            <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
-                </Card.Text>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-                <ListGroupItem>Cras justo odio</ListGroupItem>
-                <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                <ListGroupItem>Vestibulum at eros</ListGroupItem>
-            </ListGroup>
-            <Card.Body>
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
-            </Card.Body>
-        </Card> */}

@@ -6,8 +6,8 @@ import './sidebar.scss'
 
 const ContactMe = props => {
 
-    const template_id = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-    const user_id = process.env.REACT_APP_EMAILJS_USER_ID;
+    const template_id = process.env.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const user_id = process.env.env.REACT_APP_EMAILJS_USER_ID;
     console.log(template_id)
     console.log(user_id)
 

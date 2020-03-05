@@ -237,6 +237,7 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
         @media (max-width: $breakpoint-phone){
             flex-direction: column;
             height: 80%;
+            align-items: center;
         }
         .col{
             padding:0;
@@ -244,16 +245,27 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            width: fit-content;
             
             #bigger_view{
-                margin-left: 40px;
+                // margin-left: 0px;
                 height: 480px;
                 width: 400px;
+                // margin-left: 0;
+                justify-content: center;
+                // display: block;
+                @media (max-width: $breakpoint-phone){
+                    flex-direction: column;
+                    height: fit-content;
+                }
                 .minus{
                     position: absolute;
                     bottom: 10px;
-                    right: 10px;
-
+                    right: 50px;
+                    @media (max-width: $breakpoint-phone){
+                        bottom : 20px;
+                        right: 10px;
+                    }
                 }
             }
             .inner{
@@ -284,6 +296,9 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
                                     transform: scale(1.1);
                                 }
                             }
+                        }
+                        @media (max-width: $breakpoint-phone){
+                            padding-bottom: 5px;
                         }
                     }
                 }

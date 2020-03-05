@@ -43,8 +43,8 @@ const Projects = props => {
             <Icon name='cancel' size='large' onClick={()=>{props.setShowProjects(false)}}/>
         </div>
         <Row className='up'>
-            <Col>
-                <div className='inner' id={expand.speakOut ? 'bigger_view': null} style={expand.recipes && !expand.speakOut ? {'display':'none'} : null}>
+            <Col style={expand.recipes && !expand.speakOut ? {'display':'none'} : null}>
+                <div className='inner' id={expand.speakOut ? 'bigger_view': null}>
                     <img src={speakoutproj} alt='Image of Speak Out Project'/>
                     <div className='info'>
                         <h4>Speak Out</h4>
@@ -65,8 +65,8 @@ const Projects = props => {
                     </div>
                 </div>
             </Col>
-            <Col>
-                <div className='inner' id={expand.recipes ? 'bigger_view': null} style={expand.speakOut && !expand.recipes ? {'display':'none'} : null}>
+            <Col style={expand.speakOut && !expand.recipes ? {'display':'none'} : null}>
+                <div className='inner' id={expand.recipes ? 'bigger_view': null} >
                     <img src={secretrecipeproj} alt='Image of Speak Out Project'/>
                     <div className='info'>
                         <h4>Secret Recipes</h4>

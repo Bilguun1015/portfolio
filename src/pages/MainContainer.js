@@ -6,7 +6,7 @@ import ContactMe from './ContactMe.js';
 
 import { Container, Col, Row } from 'react-bootstrap';
 
-import './sidebar.scss';
+import './main.scss';
 
 const MainContainer = () => {
 

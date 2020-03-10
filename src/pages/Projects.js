@@ -7,7 +7,7 @@ import speakoutproj from './pics/speakoutproj.jpg';
 import secretrecipeproj from './pics/secretrecipeproj.jpg';
 
 import 'semantic-ui-css/semantic.min.css';
-import './sidebar.scss';
+import './main.scss';
 
 const Projects = props => {
 

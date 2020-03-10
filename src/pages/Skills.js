@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Icon } from 'semantic-ui-react';
 
-import './sidebar.scss';
+import './main.scss';
 
 const Skills = props => {
     return (

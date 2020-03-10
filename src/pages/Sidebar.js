@@ -5,7 +5,7 @@ import { Container, Navbar, Nav } from 'react-bootstrap';
 import { Icon } from 'semantic-ui-react';
 
 import 'semantic-ui-css/semantic.min.css';
-import './sidebar.scss';
+import './main.scss';
 
 const Sidebar = () => {
   const [sidebarVisible, setSidebarVisible] = useState(false)

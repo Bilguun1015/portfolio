@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import * as emailjs from 'emailjs-com';
-// import { withFormik, Form, Field } from 'formik';
 import { Icon } from 'semantic-ui-react';
-import './sidebar.scss'
+import './main.scss'
 
 const ContactMe = props => {
 

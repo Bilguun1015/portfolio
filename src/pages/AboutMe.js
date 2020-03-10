@@ -9,7 +9,7 @@ import { Icon } from 'semantic-ui-react';
 import mypic from './pics/mypic.jpg';
 import background from './pics/background.jpg';
 import 'semantic-ui-css/semantic.min.css';
-import './sidebar.scss';
+import './main.scss';
 
 const AboutMe = () => {
     const [showProjects, setShowProjects] = useState(false)

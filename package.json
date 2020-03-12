@@ -39,6 +39,7 @@
   "devDependencies": {
     "dotenv": "^8.2.0",
     "emailjs-com": "^2.4.1",
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.0",
+    "react-image-fade-in": "^1.1.0"
   }
 }

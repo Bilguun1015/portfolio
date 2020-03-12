@@ -3,6 +3,9 @@ $breakpoint-phone: 500px;
 $breakpoint-iphone7-less: 420px;
 
 html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
+body{
+    background-color:black !important;
+}
 
 //navbar styling
 .navbar{

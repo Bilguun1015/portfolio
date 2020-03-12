@@ -1,7 +1,8 @@
-import React,{ useState } from 'react';
+import React,{ useState, useEffect } from 'react';
 import Projects from './Projects';
 import Skills from './Skills';
 import ContactMe from './ContactMe';
+import ImageFadeIn from "react-image-fade-in";
 
 import { Row } from 'react-bootstrap';
 import { Icon } from 'semantic-ui-react';
@@ -12,9 +13,17 @@ import 'semantic-ui-css/semantic.min.css';
 import './main.scss';
 
 const AboutMe = () => {
-    const [showProjects, setShowProjects] = useState(false)
-    const [showContact, setShowContact] = useState(false)
-    const [showSkills, setShowSkills] = useState(false)
+    const [loaded, setLoaded] = useState(false);
+    const [showProjects, setShowProjects] = useState(false);
+    const [showContact, setShowContact] = useState(false);
+    const [showSkills, setShowSkills] = useState(false);
+
+    useEffect(()=>{
+        if(background){
+            setLoaded(true)
+        }
+    },[]);
+
 
     const setProjectVisible = e => {
         e.preventDefault();
@@ -31,9 +40,11 @@ const AboutMe = () => {
         setShowSkills(true);
     }
 
+
+
     return (
         <div className='about'>
-            <img id='background' src={background} alt='A Guy Looking Up To The Sky.'/>
+            {loaded ? <ImageFadeIn id='background' src={background} alt='A Guy Looking Up To Night Sky.' opacityTransition={2}/> : null} 
             <Row className={showProjects || showContact || showSkills ? 'none' : 'middle'} >
                 <div className='my_pic'>
                     <img src={mypic} alt='A picture of me'/>

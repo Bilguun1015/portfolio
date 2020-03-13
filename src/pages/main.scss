@@ -41,6 +41,7 @@ body{
 
 //about page styling
 .about{
+    
     #background{
         min-height: 100%;
         min-width: 1024px;
@@ -73,6 +74,15 @@ body{
         flex-direction: column;
         align-items: center;
         margin-top: 80px;
+        -webkit-animation: showText 3s normal forwards; /* Safari 4+ */
+        -moz-animation:    showText 3s normal forwards; /* Fx 5+ */
+        -o-animation:      showText 3s normal forwards; /* Opera 12+ */
+        animation:         showText 3s normal forwards;
+        @keyframes showText {
+            0% {right: 0; display: none; opacity: 0;}
+            50% {right: -300px; opacity: 1}
+            100% {opacity: 1; display: block;}
+        }
         .my_pic{
             width: 200px;
             @media(max-width: $breakpoint-tablet){

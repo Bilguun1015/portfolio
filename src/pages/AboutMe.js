@@ -28,6 +28,8 @@ const AboutMe = () => {
     const setProjectVisible = e => {
         e.preventDefault();
         setShowProjects(true);
+        // setTimeout(()=> {
+        // },1000)
     }
 
     const setContactVisible = e => {

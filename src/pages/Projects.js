@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import { Card, ListGroup, ListGroupItem, Row, Col } from 'react-bootstrap';
 import { Icon, Popup } from 'semantic-ui-react';
@@ -33,6 +33,14 @@ const Projects = props => {
             speakOut: false
         })
     }
+
+    useEffect(() => {
+        window.addEventListener('keyup', e => {
+            if(e.keyCode === 27){
+                props.setShowProjects(false)
+            }
+        })
+    },[])
 
   return (
     

@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Icon } from 'semantic-ui-react';
 
 import './main.scss';
 
 const Skills = props => {
+
+    useEffect(() => {
+        window.addEventListener('keyup', e => {
+            if(e.keyCode === 27){
+                props.setShowSkills(false)
+            }
+        })
+    },[])
+
     return (
         <div className='skills'>
             <div className='header'>

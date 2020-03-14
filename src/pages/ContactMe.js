@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as emailjs from 'emailjs-com';
 import { Icon } from 'semantic-ui-react';
 import './main.scss'
@@ -88,12 +88,21 @@ const ContactMe = props => {
         })
     }
 
+    useEffect(() => {
+        window.addEventListener('keyup', e => {
+            if(e.keyCode === 27){
+                props.setShowContact(false)
+            }
+        })
+    },[])
+
+
     return (
         // <form>
         <div className='contact'>
             <div className='header'>
                 <h2>Contact</h2>
-                <Icon name='cancel' size='large' onClick={() => { props.setShowContact(false) }} />
+                <Icon name='cancel' size='large' onClick={() => {props.setShowContact(false)}} />
             </div>
             {!success ?
                 <div className='send_form'>

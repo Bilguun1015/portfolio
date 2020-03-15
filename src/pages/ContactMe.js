@@ -59,7 +59,6 @@ const ContactMe = props => {
                 "user_RtbbRJHpns8ZShVVhyfI8"
             ).then(res => {
                 if (res.status === 200) {
-                    console.log(res)
                     setSuccess(true)
                 }
             }, err => {

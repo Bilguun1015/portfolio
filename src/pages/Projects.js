@@ -43,8 +43,6 @@ const Projects = props => {
     },[])
 
   return (
-    
-    // <Container fluid style={{border: "1px solid black", paddingLeft:0, height}}>
     <div className='projects'>
         <div className='header'>
             <h2>Projects</h2>

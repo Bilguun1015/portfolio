@@ -92,7 +92,6 @@ const ContactMe = props => {
 
 
     return (
-        // <form>
         <div className='contact'>
             <div className='header'>
                 <h2>Contact</h2>
@@ -131,7 +130,6 @@ const ContactMe = props => {
             }
 
         </div>
-        // </form>
     )
 }
 

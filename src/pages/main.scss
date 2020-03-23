@@ -256,6 +256,13 @@ body{
     height: 600px;
     @media (max-width: $breakpoint-phone){
         width: 400px;
+        height: auto;
+        margin: auto;
+        position: relative;
+        transform: translate(0,0);
+        top: 0;
+        left: 0;
+        margin-top: 30px;
     }
     .header{
         display: flex;
@@ -288,11 +295,20 @@ body{
     .up{
         position: absolute;
         top: 80px;
+        // @media (max-width: $breakpoint-phone){
+        //     display: flex;
+        //     position: relative;
+        //     top:0;
+        // }
     }
     .down{
         position: absolute;
         top: 300px; 
-        display:none !important;
+        // @media (max-width: $breakpoint-phone){
+        //     display: flex;
+        //     position: relative;
+        //     top:0;
+        // }
     }
     .up, .down{
         display: flex;
@@ -301,9 +317,12 @@ body{
         background-color:none;
         width: 80%;
         @media (max-width: $breakpoint-phone){
-            flex-direction: column;
-            height: 80%;
-            align-items: center;
+            // flex-direction: column;
+            // height: 80%;
+            // align-items: center;
+            display: flex;
+            position: relative;
+            top:0;
         }
         .col{
             padding:0;
@@ -329,7 +348,7 @@ body{
                     bottom: 10px;
                     right: 50px;
                     @media (max-width: $breakpoint-phone){
-                        bottom : 20px;
+                        bottom : 30px;
                         right: 10px;
                     }
                 }
@@ -344,6 +363,9 @@ body{
                 // transition: width 0.5s ease;
                 background: linear-gradient(#92bCa6, #A2CCB6);
                 // background-color: black;
+                @media(max-width: $breakpoint-phone){
+                    margin-bottom: 30px;
+                }
                 .info{
                     .plus{
                         width: 100%;

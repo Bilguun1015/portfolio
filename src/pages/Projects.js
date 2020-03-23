@@ -13,7 +13,8 @@ const Projects = props => {
 
     const [expand, setExpand] = useState({
         speakOut : false,
-        recipes: false
+        recipes: false,
+        game: false
     })
 
     const handleExpandSpeakOut = e => {
@@ -21,7 +22,9 @@ const Projects = props => {
         setExpand({
             ...expand,
             speakOut: !expand.speakOut,
-            recipes: false
+            recipes: false,
+            game1: false,
+            game2: false
         })
     }
 
@@ -30,7 +33,9 @@ const Projects = props => {
         setExpand({
             ...expand,
             recipes: !expand.recipes,
-            speakOut: false
+            speakOut: false,
+            game1: false,
+            game2: false
         })
     }
 
@@ -63,9 +68,7 @@ const Projects = props => {
                             <li>For state management, implemented Redux store</li>
                         </ul>
                         <div className='links'>
-                            {/* <Popup content='Check out the code on Github' trigger = {<a href='https://github.com/Lambda-School-Labs/speak-out-fe' target='_blank'><Icon name='github' size='large' /></a>} position='top left' inverted/> */}
                             <a href='https://github.com/Lambda-School-Labs/speak-out-fe' target='_blank'><Icon name='github' size='large' /></a>
-                            {/* <Popup content='Check out the actual website' trigger = {<a href='https://speakout-now.com/' target='_blank'><Icon name='linkify' size='large' /></a>} position='top left' inverted/> */}
                             <a href='https://speakout-now.com/' target='_blank'><Icon name='linkify' size='large' /></a>
                         </div>
                     </div>
@@ -93,10 +96,12 @@ const Projects = props => {
                 </div>
             </Col>
         </Row>
-        <Row className='down'>
+        <Row className='down' style={expand.recipes || expand.speakOut ? {'display':'none'} : null}>
             <Col>
                 <div className='inner'>
-                    {/* <img className='comingSoon' src='https://media.giphy.com/media/rgVLXMbhACKQ/giphy.gif' alt='Coming Soon'/> */}
+                    <div>
+                        <h4>Memory Game</h4>
+                    </div>
                 </div>
             </Col>
             <Col>

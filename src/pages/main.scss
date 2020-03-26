@@ -305,7 +305,6 @@ body{
     .up, .down{
         display: flex;
         justify-content: space-evenly;
-        cursor: pointer;
         background-color:none;
         width: 80%;
         // position: relative;
@@ -337,6 +336,7 @@ body{
                     position: absolute;
                     bottom: 10px;
                     right: 50px;
+                    cursor: pointer;
                     @media (max-width: $breakpoint-phone){
                         bottom : 40px;
                         right: 10px;
@@ -363,13 +363,13 @@ body{
                         text-align: right;
                         margin-bottom: 10px;
                         margin-left: -5px;
+                        cursor: pointer;
                     }
                     .links{
                         a{
                             color:black;
                             text-decoration: none;
                             .icon{
-                                // color: white;
                                 &:hover{
                                     transform: scale(1.1);
                                 }

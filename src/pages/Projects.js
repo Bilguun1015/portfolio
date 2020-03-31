@@ -97,7 +97,6 @@ const Projects = props => {
                         <div className='links'>
                             <a href='https://github.com/orgs/secret-family-recipe-s-cookbook/dashboard' target='_blank' rel='noopener'><Icon name='github' size='large' /></a>
                             <a href='https://secret-recipes-marketpage.netlify.com/' target='_blank' rel='noopener'><Icon name='linkify' size='large' /></a>
-                            {/* <a href='mailto:bbg.1015@gmail.com'><Icon name='mail' size='large' target='_blank'/></a> */}
                         </div>
                     </div>
                 </div>
@@ -122,14 +121,8 @@ const Projects = props => {
                         </ul>
                         <div className='links'>
                             <a href='https://github.com/BuildWeekVacationPlanner/BACKEND' target='_blank' rel='noopener'><Icon name='github' size='large' /></a>
-                            {/* <a href='https://speakout-now.com/' target='_blank'><Icon name='linkify' size='large' /></a> */}
                         </div>
                     </div>
-                </div>
-            </Col>
-            <Col style={{'display':'none'}}>
-                <div className='inner'>
-                    {/* <img className='comingSoon' src='https://media.giphy.com/media/rgVLXMbhACKQ/giphy.gif' alt='Coming Soon'/> */}
                 </div>
             </Col>
         </Row>

@@ -300,7 +300,7 @@ body{
     .down{
         position: absolute;
         top: 300px; 
-        display:none !important;
+        // display:none !important;
     }
     .up, .down{
         display: flex;
@@ -309,9 +309,12 @@ body{
         width: 80%;
         // position: relative;
         @media (max-width: $breakpoint-phone){
-            // display: flex;
-            // position: relative;
-            // top:0;
+            display: flex;
+            position: relative;
+            top:0;
+        }
+        .not-visible{
+            display: none !important;
         }
         .col{
             padding:0;
@@ -355,6 +358,10 @@ body{
                 // background-color: black;
                 @media(max-width: $breakpoint-phone){
                     margin-bottom: 30px;
+                }
+                #nodejs{
+                    padding: 0 0 10px 0;
+                    background-color: white;
                 }
                 .info{
                     .plus{

@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
 
-import { Card, ListGroup, ListGroupItem, Row, Col } from 'react-bootstrap';
-import { Icon, Popup } from 'semantic-ui-react';
+import { Row, Col } from 'react-bootstrap';
+import { Icon } from 'semantic-ui-react';
 
 import speakoutproj from './pics/speakoutproj.jpg';
 import secretrecipeproj from './pics/secretrecipeproj.jpg';
+import nodejs from './pics/nodejs.png';
 
 import 'semantic-ui-css/semantic.min.css';
 import './main.scss';
@@ -14,8 +15,7 @@ const Projects = props => {
     const [expand, setExpand] = useState({
         speakOut : false,
         recipes: false,
-        game: false
-    })
+        vacation: false    })
 
     const handleExpandSpeakOut = e => {
         e.preventDefault();
@@ -23,8 +23,7 @@ const Projects = props => {
             ...expand,
             speakOut: !expand.speakOut,
             recipes: false,
-            game1: false,
-            game2: false
+            vacation: false
         })
     }
 
@@ -34,8 +33,16 @@ const Projects = props => {
             ...expand,
             recipes: !expand.recipes,
             speakOut: false,
-            game1: false,
-            game2: false
+            vacation: false
+        })
+    }
+
+    const handleExpandVacation = e => {
+        e.preventDefault();
+        setExpand({
+            vacation: !expand.vacation,
+            speakOut: false,
+            recipes: false
         })
     }
 
@@ -54,7 +61,7 @@ const Projects = props => {
             <Icon name='cancel' size='large' onClick={()=>{props.setShowProjects(false)}}/>
         </div>
         <Row className='up'>
-            <Col style={expand.recipes && !expand.speakOut ? {'display':'none'} : null}>
+            <Col className={expand.recipes || expand.vacation ? 'not-visible' : null}>
                 <div className='inner' id={expand.speakOut ? 'bigger_view': null}>
                     <img src={speakoutproj} alt='Image of Speak Out Project'/>
                     <div className='info'>
@@ -74,7 +81,7 @@ const Projects = props => {
                     </div>
                 </div>
             </Col>
-            <Col style={expand.speakOut && !expand.recipes ? {'display':'none'} : null}>
+            <Col className={expand.speakOut || expand.vacation ? 'not-visible' : null}>
                 <div className='inner' id={expand.recipes ? 'bigger_view': null} >
                     <img src={secretrecipeproj} alt='Image of Speak Out Project'/>
                     <div className='info'>
@@ -96,15 +103,31 @@ const Projects = props => {
                 </div>
             </Col>
         </Row>
-        <Row className='down' style={expand.recipes || expand.speakOut ? {'display':'none'} : null}>
-            <Col>
-                <div className='inner'>
-                    <div>
-                        <h4>Memory Game</h4>
+        <Row className={expand.vacation ? 'up': 'down'}>
+            <Col className={expand.recipes || expand.speakOut ? 'not-visible' : null}>
+                <div className='inner' id={expand.vacation ? 'bigger_view': null}>
+                    <img src={nodejs} id='nodejs' alt='Image of NodeJS and Express, Postgress'/>
+                    <div className='info'>
+                        <h4>Vacation Planner</h4>
+                        {expand.vacation ? <Icon name='minus' size='large' onClick={handleExpandVacation}/> : <Icon name='plus' size='large' onClick={handleExpandVacation}/>}
+                        <p>Node.Js and Express project families and friends to plan thier dream trip</p>
+                        <ul>
+                            <li>Implemented RESTful APIs</li>
+                            <li>Used PostgreSQL for data persistancy</li>
+                            <li>Development environment Sqlite3 was used</li>
+                            <li>Implemented JSON Web Token for secure authentication and authorization</li>
+                            <li>Bcript was used for secure password storage</li>
+                            <li>Implemented Unit testing</li>
+                            <li>Documentation was done for client side request</li>
+                        </ul>
+                        <div className='links'>
+                            <a href='https://github.com/BuildWeekVacationPlanner/BACKEND' target='_blank'><Icon name='github' size='large' /></a>
+                            {/* <a href='https://speakout-now.com/' target='_blank'><Icon name='linkify' size='large' /></a> */}
+                        </div>
                     </div>
                 </div>
             </Col>
-            <Col>
+            <Col style={{'display':'none'}}>
                 <div className='inner'>
                     {/* <img className='comingSoon' src='https://media.giphy.com/media/rgVLXMbhACKQ/giphy.gif' alt='Coming Soon'/> */}
                 </div>

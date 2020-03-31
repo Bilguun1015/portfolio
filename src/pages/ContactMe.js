@@ -119,9 +119,9 @@ const ContactMe = props => {
                         <button id='reset' type='reset' onClick={handleReset}>RESET</button>
                     </div>
                     <div className='links'>
-                        <a href='https://github.com/Bilguun1015' target='_blank'><Icon name='github' size='big' /></a>
-                        <a href='https://www.linkedin.com/in/bilguun-nomch/' target='_blank'><Icon name='linkedin' size='big' /></a>
-                        <a href='mailto:bbg.1015@gmail.com'><Icon name='mail' size='big' target='_blank' /></a>
+                        <a href='https://github.com/Bilguun1015' target='_blank' rel='noopener'><Icon name='github' size='big' /></a>
+                        <a href='https://www.linkedin.com/in/bilguun-nomch/' target='_blank' rel='noopener'><Icon name='linkedin' size='big' /></a>
+                        <a href='mailto:bbg.1015@gmail.com'><Icon name='mail' size='big' target='_blank' rel='noopener'/></a>
                     </div>
                 </div> : <>
                     <h3 id='message'>Thank you for your message!</h3>

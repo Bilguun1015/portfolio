@@ -64,9 +64,9 @@ const AboutMe = () => {
                     </div>
                 </div>
                 <div className='links'>
-                    <a href='https://github.com/Bilguun1015' target='_blank'><Icon name='github' size='big' /></a>
-                    <a href='https://www.linkedin.com/in/bilguun-nomch/' target='_blank'><Icon name='linkedin' size='big' /></a>
-                    <a href='mailto:bbg.1015@gmail.com'><Icon name='mail' size='big' target='_blank'/></a>
+                    <a href='https://github.com/Bilguun1015' target='_blank' rel='noopener'><Icon name='github' size='big' /></a>
+                    <a href='https://www.linkedin.com/in/bilguun-nomch/' target='_blank' rel='noopener'><Icon name='linkedin' size='big' /></a>
+                    <a href='mailto:bbg.1015@gmail.com'><Icon name='mail' size='big' target='_blank' rel='noopener'/></a>
                 </div>
                 <div className='horizontal_line'></div>
                 <div className='vertical_line'></div>
@@ -86,7 +86,7 @@ const AboutMe = () => {
             {showSkills ? <Skills setShowSkills = {setShowSkills}/> : null}
             {showContact ? <ContactMe setShowContact = {setShowContact}/> : null}
             <div id='footer'>
-                <p>Built By Bilguun Nomch Inspired By <a href='https://html5up.net/'>HTML5 UP</a></p>
+                <p>Built By Bilguun Nomch Inspired By <a href='https://html5up.net/' target='_blank' rel='noopener'>HTML5 UP</a></p>
             </div>
         </div>
     )

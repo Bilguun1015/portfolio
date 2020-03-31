@@ -75,8 +75,8 @@ const Projects = props => {
                             <li>For state management, implemented Redux store</li>
                         </ul>
                         <div className='links'>
-                            <a href='https://github.com/Lambda-School-Labs/speak-out-fe' target='_blank'><Icon name='github' size='large' /></a>
-                            <a href='https://speakout-now.com/' target='_blank'><Icon name='linkify' size='large' /></a>
+                            <a href='https://github.com/Lambda-School-Labs/speak-out-fe' target='_blank' rel='noopener'><Icon name='github' size='large' /></a>
+                            <a href='https://speakout-now.com/' target='_blank' rel='noopener'><Icon name='linkify' size='large' /></a>
                         </div>
                     </div>
                 </div>
@@ -95,8 +95,8 @@ const Projects = props => {
                             <li>Styled the re-usable components using CSS</li>
                         </ul>
                         <div className='links'>
-                            <a href='https://github.com/orgs/secret-family-recipe-s-cookbook/dashboard' target='_blank'><Icon name='github' size='large' /></a>
-                            <a href='https://secret-recipes-marketpage.netlify.com/' target='_blank'><Icon name='linkify' size='large' /></a>
+                            <a href='https://github.com/orgs/secret-family-recipe-s-cookbook/dashboard' target='_blank' rel='noopener'><Icon name='github' size='large' /></a>
+                            <a href='https://secret-recipes-marketpage.netlify.com/' target='_blank' rel='noopener'><Icon name='linkify' size='large' /></a>
                             {/* <a href='mailto:bbg.1015@gmail.com'><Icon name='mail' size='large' target='_blank'/></a> */}
                         </div>
                     </div>
@@ -121,7 +121,7 @@ const Projects = props => {
                             <li>Documentation was done for client side request</li>
                         </ul>
                         <div className='links'>
-                            <a href='https://github.com/BuildWeekVacationPlanner/BACKEND' target='_blank'><Icon name='github' size='large' /></a>
+                            <a href='https://github.com/BuildWeekVacationPlanner/BACKEND' target='_blank' rel='noopener'><Icon name='github' size='large' /></a>
                             {/* <a href='https://speakout-now.com/' target='_blank'><Icon name='linkify' size='large' /></a> */}
                         </div>
                     </div>

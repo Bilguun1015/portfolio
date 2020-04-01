@@ -3,14 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.4.1",
     "formik": "^2.1.4",
     "jquery": "1.9.1",
     "now": "^16.5.2",
     "react": "^16.11.0",
-    "react-bootstrap": "^1.0.0-beta.14",
+    "react-bootstrap": "^1.0.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0",
+    "react-image-fade-in": "^1.1.0",
+    "react-scripts": "^3.4.1",
     "react-transition-group": "^4.3.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.2",
@@ -40,7 +41,6 @@
   "devDependencies": {
     "dotenv": "^8.2.0",
     "emailjs-com": "^2.4.1",
-    "node-sass": "^4.13.0",
-    "react-image-fade-in": "^1.1.0"
+    "node-sass": "^4.13.0"
   }
 }

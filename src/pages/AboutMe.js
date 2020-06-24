@@ -46,7 +46,7 @@ const AboutMe = () => {
 
     return (
         <div className='about'>
-            {loaded ? <ImageFadeIn id='background' src={background} alt='A Guy Looking Up To Night Sky.' opacityTransition={2}/> : null} 
+            {/* {loaded ? <ImageFadeIn id='background' src={background} alt='A Guy Looking Up To Night Sky.' opacityTransition={2}/> : null}  */}
             <Row className={showProjects || showContact || showSkills ? 'none' : 'middle'} >
                 <div className='my_pic'>
                     <img src={mypic} alt='A picture of me'/>

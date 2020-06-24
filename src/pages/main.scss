@@ -54,7 +54,12 @@ $breakpoint-iphone7-less: 420px;
 html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
 
 body{
+    background-image: url(./pics/background.jpg);
     background-color:black !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 //navbar styling
@@ -93,15 +98,16 @@ body{
 .about{
     
     #background{
-        min-height: 100%;
-        min-width: 1024px;
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        top:0;
-        left:0;
-        z-index: -50;
-        filter:brightness(50%);
+        // min-height: 100%;
+        // min-width: 1024px;
+        // width: 100vw;
+        // height: 100vh;
+        // position: fixed;
+        // top:0;
+        // left:0;
+        // z-index: -50;
+        // filter:brightness(50%);
+        
     }
     #footer{
         position: fixed;
@@ -292,6 +298,11 @@ body{
                 font-size: 16px;
             }
         }
+    }
+    .carousel {
+        height: 500px;
+        width: 550px;
+        border: 1px solid white;
     }
     .up{
         position: absolute;

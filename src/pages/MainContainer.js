@@ -12,10 +12,10 @@ const MainContainer = () => {
 
     return (
         // <Container fluid={true}>
-        <>  
+        <div className = 'test'>  
             {/* <Sidebar /> */}
             <AboutMe />
-        </>
+        </div>
         // </Container>
     )
 }

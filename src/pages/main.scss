@@ -56,11 +56,18 @@ html, body, p, h1, h2, h3, h4, h5 { font-family: 'Roboto', sans-serif; }
 body{
     background-image: url(./pics/background.jpg);
     background-color:black !important;
+    // background-blend-mode: saturation;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    border: 1px solid white;
+    
+    // background-image: ;
 }
+// .test{
+//     border: 1px solid white;
+// }
 
 //navbar styling
 .navbar{
@@ -96,7 +103,7 @@ body{
 
 //about page styling
 .about{
-    
+    // height: 100vh;
     #background{
         // min-height: 100%;
         // min-width: 1024px;
@@ -107,7 +114,6 @@ body{
         // left:0;
         // z-index: -50;
         // filter:brightness(50%);
-        
     }
     #footer{
         position: fixed;
@@ -631,8 +637,10 @@ body{
             #submit{
                 color: black;
                 background-color: #D3D3D3;
+                border: none;
             }
             #reset{
+                border: 1px solid white;
                 color: #D3D3D3;
                 background-color: rgba(0, 0, 0, 0.5);
                 cursor: pointer;

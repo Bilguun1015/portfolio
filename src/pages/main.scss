@@ -260,12 +260,13 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     background-color: rgba(0, 0, 0, 0.5);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: fixed;
-    width: 600px;
-    height: 600px;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // position: fixed;
+    width: 80%;
+    margin: 0 auto;
+    // height: 600px;
     @media (max-width: $breakpoint-phone){
         width: 400px;
         height: auto;
@@ -306,9 +307,14 @@ body{
         }
     }
     .carousel {
-        height: 500px;
-        width: 550px;
+        // height: 500px;
+        // width: 550px;
         border: 1px solid white;
+        max-height: 80vh;
+        img{
+            filter: brightness(0.65);
+            max-height: 80vh;
+        }
     }
     .up{
         position: absolute;
